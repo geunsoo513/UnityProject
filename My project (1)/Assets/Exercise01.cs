@@ -4,8 +4,71 @@ using UnityEngine;
 
 public class Exercise01 : MonoBehaviour
 {
+
+    //enum PlayerState { Idle,Move,Attack}
     private void Awake()
     {
+        //Nullable
+        int? intValue;
+
+        intValue = null;
+        Debug.Log(intValue.HasValue);
+        //Debug.Log(intValue.Value); -> 현재 IntValue가 null이기 때문에 값을 출력하면 에러 발생
+
+        intValue = 30;
+        Debug.Log(intValue.HasValue);
+        Debug.Log(intValue.Value);
+
+        //var
+        var valueInt = 33;
+        var valueFloat = 33.4567f;
+        var valueString = "문자열";
+
+        Debug.Log("정수 : " + valueInt);
+        Debug.Log("실수 : " + valueFloat);
+        Debug.Log("문자열 : " + valueString);
+
+        /* 열거형을 이용한 플레이어 상태 관리
+        PlayerState playerState = PlayerState.Idle;
+        switch (playerState)
+        {
+            case PlayerState.Idle:
+                Debug.Log("플레이어 상태 : 대기");
+                break;
+
+            case PlayerState.Move:
+                Debug.Log("플레이어 상태 : 이동");
+                break;
+
+            case PlayerState.Attack:
+                Debug.Log("플레이어 상태 : 공격");
+                break;
+        }
+
+
+        /* 상수를 이용한 플레이어 상태 관리
+        const int PlayerIdle = 0;
+        const int PlayerMove = 1;
+        const int PlayerAttack = 2;
+
+        int playerState = PlayerAttack;
+
+        switch (playerState)
+        {
+            case PlayerIdle:
+                Debug.Log("플레이어 상태 : 대기");
+                break;
+
+            case PlayerMove:
+                Debug.Log("플레이어 상태 : 이동");
+                break;
+
+            case PlayerAttack:
+                Debug.Log("플레이어 상태 : 공격");
+                break;
+        }
+
+        /* 숫자를 문자열로 형 변환
         string stringValue = "초기화";
         int intValue = 33;
         float floatValue = 12.3456f;
