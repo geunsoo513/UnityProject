@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Exercise03 : MonoBehaviour
 {
@@ -9,7 +10,51 @@ public class Exercise03 : MonoBehaviour
 
     private void Awake()
     {
-        // 05. 반복문 while
+        int[][] array = new int[4][];
+        array[0] = new int[3] { 1, 2, 3 };
+        array[1] = new int[] { 10, 20, 30, 40 };
+        array[2] = new int[] { 100, 200, 300, 400 };
+        array[3] = new int[] { 1000, 2000, 3000, 4000, 5000 };
+
+
+        for(int i = 0; i < array.Length; ++i)
+        {
+            for(int j = 0; j < array[i].Length; ++j)
+            {
+                Debug.Log($"[{i}][{j}]={array[i][j]}");
+            }
+        }
+
+
+
+
+        /* 06. 배열
+        int[] eneymys = new int[5];
+        Debug.Log($"배열의 타입 : {eneymys.GetType()}");
+        Debug.Log($"배열의 기본 타입 : {eneymys.GetType().BaseType}");
+
+        Debug.Log("==정렬 전==");
+        for(int i = 0; i < eneymys.Length; ++i)
+        {
+            //using System에도 Random 클래스가 있기때문에
+            //앞에 UnityEngine 공간을 붙인다.
+
+            eneymys[i] = UnityEngine.Random.Range(0, 100);
+            Debug.Log(eneymys[i]);
+        }
+
+        Array.Sort(eneymys);
+
+        Debug.Log("==정렬 후==");
+
+        for(int i = 0; i < eneymys.Length; ++i)
+        {
+            Debug.Log(eneymys[i]);
+        }
+        Debug.Log($"Dimensions : {eneymys.Rank}");
+
+
+        /* 05. 반복문 while
         int result = 0;
         int index = 1;
 
