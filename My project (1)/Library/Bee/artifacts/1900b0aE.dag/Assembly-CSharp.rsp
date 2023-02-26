@@ -351,14 +351,18 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/ArrayListExercise.cs"
 "Assets/DecommissionFunction.cs"
+"Assets/DictionaryExercise.cs"
 "Assets/Exercise01.cs"
 "Assets/Exercise02.cs"
 "Assets/Exercise03.cs"
 "Assets/GizmosFunction.cs"
 "Assets/HashtableExercise.cs"
 "Assets/InitializeFunction.cs"
+"Assets/ListExercise.cs"
 "Assets/QueueExercise.cs"
+"Assets/QueueExercise1.cs"
 "Assets/StackExercise.cs"
+"Assets/StackExercise1.cs"
 "Assets/TestCode.cs"
 -langversion:9.0
 
